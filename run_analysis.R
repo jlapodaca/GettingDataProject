@@ -48,7 +48,7 @@ test$Subject<-subjecttest$V1
 train$Subject<-subjecttrain$V1
 
 ##One single data set
-trainytest<-rbind(train,test)
+trainytest1<-rbind(train,test)
 
 
 ############
