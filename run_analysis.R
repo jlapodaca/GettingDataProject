@@ -39,7 +39,7 @@ colnames(test)<-columnames[,2]
 test$ActivityCode<-ytest$V1
 train$ActivityCode<-ytrain$V1
 # 3. Uses descriptive activity names to name the activities in the data set
-test$ActivityDescription<-actlabels[match(test$ActivityCode,actlabels$V1),"V2"]
+test$ActDescription<-actlabels[match(test$ActivityCode,actlabels$V1),"V2"]
 train$ActivityDescription<-actlabels[match(train$ActivityCode,actlabels$V1),"V2"]
 
 #Adding subject
