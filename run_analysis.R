@@ -60,7 +60,20 @@ trainytest1<-trainytest[,columnsofint]
 
 # 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-melteado<-melt(trainytest1,id=c("Subject","ActivityDescription"))
+melteado<-melt(trainytest1,id=c("Subject","ActDescription"))
 table2<-as.data.frame(cast(melteado, ActivityDescription  + Subject ~ variable, mean, value=c("value")))
 
 write.table(table2,"table2.txt")
+
+
+
+
+##Funcion que trae los usuarios del área
+##usuariosabasto<-usuariosaba()
+usuariosarea<-function(area)
+{
+usuarioscem<-read.csv("Usuarios ZEUP LOG y AGG.csv")
+usuarioscem<-usuarioscem[usuarioscem$Area==area,]
+usuarioscem$Usuario<-gsub(" ","",usuarioscem$Usuario)
+usuarioscem$Usuario<-toupper(usuarioscem$Usuario) 
+}
