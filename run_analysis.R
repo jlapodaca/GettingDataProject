@@ -18,6 +18,7 @@ columnames<-read.table("features.txt")
 ## subject and y; subject is the guy to whom the test was made: y is the activity 
 subjecttrain<-read.table("subject_train.txt")
 ytrain<-read.table("y_train.txt")
+
 subjecttest<-read.table("subject_test.txt")
 ytest<-read.table("y_test.txt")
 
