@@ -10,6 +10,11 @@ library(reshape)
 ###Reading in files
 ##Forum says we should only read these files and not the inertial signals (more raw)
 train<-read.table("X_train.txt")
+
+
+
+
+
 test<-read.table("X_test.txt")
 
 ###Column names in "features.txt"
